@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 10:09:40 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/21 21:07:17 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/23 18:38:45 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ class PhoneBook
 {
 private:
     Contact contacts[8];
+    int     count;
     
 public:
     PhoneBook();
     ~PhoneBook();
-    void    printContact(int index);
+    
+    void    printContact(Contact contact);
     void    printContacts(void);
     void    search(void);
     void    addContact(void);

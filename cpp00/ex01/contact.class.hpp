@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 10:13:27 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/21 21:03:45 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:36:07 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,22 @@ private:
     std::string  darkest_secret;
     std::string  phone_number;
 
-    void    get_input(std::string str); 
-    void    init_contact(void);
-
 public:
     Contact();
     ~Contact();
-    
-    // display contact
-    void    print_contact
-    // dsplay contacts
-    // print data
-    void print_data
-    // set data
+    // setindex
+    void set_index(int index);
+    void set_nickname(std::string str);
+    void set_fname(std::string str);
+    void set_lname(std::string str);
+    void set_secret(std::string str);
+    void set_pnumber(std::string str);
+
+    const std::string&  get_nickname(void) const;
+    const std::string&  get_fname(void) const;
+    const std::string&  get_lname(void) const;
+    const std::string&  get_secret(void) const;
+    const std::string&  get_pnumber(void) const;
 };
 
 #endif 

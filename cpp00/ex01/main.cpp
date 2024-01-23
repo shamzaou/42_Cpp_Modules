@@ -6,12 +6,12 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 09:23:26 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/21 10:05:47 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/23 18:37:32 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "phonebook.hpp"
+#include "phonebook.class.hpp"
 
 #define RESET   "\033[0m"
 #define GREEN   "\033[32m"
@@ -31,7 +31,7 @@ void print_usage(void)
 
 int main(void)
 {
-    Phonebook book;
+    PhoneBook book;
     std::string input = "";
     
     print_usage();
