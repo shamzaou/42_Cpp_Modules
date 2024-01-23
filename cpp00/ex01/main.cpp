@@ -35,17 +35,20 @@ int main(void)
     std::string input = "";
     
     print_usage();
-    while (input.compare("EXIT"))
+    while (true)
     {
-        if (input.compare("ADD") == 0)
+        std::cout << "> " << std::flush;
+        if (!std::getline(std::cin, input))
+            break;
+        if (input.compare("EXIT") == 0)
+            break;
+        else if (input.compare("ADD") == 0)
             book.addContact();
         else if (input.compare("SEARCH") == 0)
         {
             book.printContacts();
             book.search();
         }
-        std::cout << "> " << std::flush;
-        std::cin >> input;
     }
     return 0;
 }
