@@ -20,6 +20,7 @@ class PhoneBook
 private:
     Contact contacts[8];
     int     count;
+    int     nextIndex;
     
 public:
     PhoneBook();

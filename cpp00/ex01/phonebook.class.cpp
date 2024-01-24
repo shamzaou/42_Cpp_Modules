@@ -14,7 +14,7 @@
 #include <iomanip>
 #include "phonebook.class.hpp"
 
-PhoneBook::PhoneBook() : count(0) {};
+PhoneBook::PhoneBook() : count(0), nextIndex(0) {};
 PhoneBook::~PhoneBook() {};
 
 bool isValidNumber(const std::string& input) {
@@ -81,13 +81,14 @@ void PhoneBook::addContact(void)
 
     if (count < 8)
     {
+        this->contacts[nextIndex] = new_contact;
+        nextIndex = (nextIndex + 1) % 8;
         count++;
-        this->contacts[count - 1] = new_contact;
     }
     else
     {
-        count = 1;
-        this->contacts[count - 1] = new_contact;
+        this->contacts[nextIndex] = new_contact;
+        nextIndex = (nextIndex + 1) % 8;
     }
     
     std::cout << "Contact added successfully" << std::endl;
