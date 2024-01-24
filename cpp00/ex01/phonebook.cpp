@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "phonebook.class.hpp"
+#include "phonebook.hpp"
 
 PhoneBook::PhoneBook() : count(0), nextIndex(0) {};
 PhoneBook::~PhoneBook() {};

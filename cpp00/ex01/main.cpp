@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "phonebook.class.hpp"
+#include "phonebook.hpp"
 
 #define RESET   "\033[0m"
 #define GREEN   "\033[32m"

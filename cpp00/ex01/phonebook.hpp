@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-#include "contact.class.hpp"
+#include "contact.hpp"
 
 class PhoneBook
 {
