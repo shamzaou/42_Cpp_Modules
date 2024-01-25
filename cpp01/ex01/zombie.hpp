@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 10:34:05 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/24 15:28:30 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:56:30 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
     ~Zombie();
 
     void    announce( void );
+    void    setName(std::string name);
 };
 
 Zombie* zombieHorde( int N, std::string name );
