@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:39:03 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/30 19:33:22 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/30 19:43:12 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,16 @@ std::string replace(std::string line, const std::string& s1, const std::string& 
 
 int main(int argc, char **argv)
 {
-    if (argc != 4)
+    if (argc != 4 || std::string(argv[1]).empty() || std::string(argv[2]).empty() || std::string(argv[3]).empty())
+    {
+        std::cout << "Error: File or strings to be replaced cannot be empty" << std::endl;
         return (1);
+    }
     
-    // opening file to be read
+    // opening the file to be read
     std::ifstream inputFileStream(argv[1]);
     
-    // creating output file with the correct extension 
+    // creating the output file with the correct extension 
     std::string outputFileName = std::string(argv[1]) + ".replace";
     std::ofstream outputFileStream(outputFileName.c_str());
     
@@ -46,10 +49,13 @@ int main(int argc, char **argv)
             line = replace(line, argv[2], argv[3]);
             outputFileStream << line << std::endl;
         } 
-        // close files
+        inputFileStream.close();
+        outputFileStream.close();
     }
     else
+    {
         std::cout << "Unable to create or open files" << std::endl;
-
+        return (1);
+    }
     return (0);
 }
