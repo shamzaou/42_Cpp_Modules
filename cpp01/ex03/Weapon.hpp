@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 16:19:20 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/27 13:50:51 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:46:14 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,11 @@ private:
     std::string type;
 
 public:
-    Weapon();
-    ~Weapon();
+    Weapon(std::string type);
+    ~Weapon(void);
 
-    const   std::string& getType() const;
+    const   std::string& getType(void);
     void    setType(std::string new_type);
 };
-
-Weapon::Weapon(/* args */)
-{
-}
-
-Weapon::~Weapon()
-{
-}
-
 
 #endif

@@ -1,4 +1,4 @@
-NAME = phonebook
+NAME = ex03
 
 CXX := c++
 
