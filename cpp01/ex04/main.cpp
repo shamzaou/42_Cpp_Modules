@@ -6,13 +6,23 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 17:39:03 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/30 19:43:12 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/01/31 21:01:33 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 
+bool    is_valid_file( const std::string& filePath)
+{
+    std::ofstream testFileStream(filePath.c_str(), std::ios::out | std::ios::app);
+    if (testFileStream.is_open())
+    {
+        testFileStream.close();
+        return (true);
+    }
+    return (false);
+}
 
 std::string replace(std::string line, const std::string& s1, const std::string& s2)
 {
@@ -34,10 +44,13 @@ int main(int argc, char **argv)
     }
     
     // opening the file to be read
-    std::ifstream inputFileStream(argv[1]);
+    std::string filePath = argv[1];
+    if (!is_valid_file(filePath))
+        return (1);
+    std::ifstream inputFileStream(filePath);
     
     // creating the output file with the correct extension 
-    std::string outputFileName = std::string(argv[1]) + ".replace";
+    std::string outputFileName = filePath + ".replace";
     std::ofstream outputFileStream(outputFileName.c_str());
     
     // replacing and writing to the new file
