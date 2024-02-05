@@ -1,4 +1,4 @@
-NAME = harlequin
+NAME = harl
 
 CXX := c++
 
