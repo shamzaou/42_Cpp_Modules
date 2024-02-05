@@ -1,10 +1,10 @@
-NAME = ex05
+NAME = phonebook
 
 CXX := c++
 
 CXXFLAGS := -std=c++98 -Wall -Wextra -Werror
 
-SRCS := main.cpp
+SRCS := main.cpp phonebook.cpp contact.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 
