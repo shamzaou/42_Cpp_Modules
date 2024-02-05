@@ -1,10 +1,10 @@
-NAME = ex05
+NAME = harlequin
 
 CXX := c++
 
 CXXFLAGS := -std=c++98 -Wall -Wextra -Werror
 
-SRCS := main.cpp
+SRCS := main.cpp Harl.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 

@@ -62,6 +62,16 @@
         "utility": "cpp",
         "vector": "cpp",
         "iomanip": "cpp",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "clocale": "cpp",
+        "*.tcc": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "deque": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "numbers": "cpp"
     }
 }
