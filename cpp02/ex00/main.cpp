@@ -6,7 +6,13 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:03:42 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/02/05 17:03:43 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/02/05 17:06:03 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+
+int main(void)
+{
+    
+}
