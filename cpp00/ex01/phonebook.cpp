@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.cpp                                :+:      :+:    :+:   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:49:30 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/01/23 18:44:23 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/03 04:49:31 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
 #include "phonebook.hpp"
 
 PhoneBook::PhoneBook() : count(0), nextIndex(0) {};
@@ -122,7 +120,7 @@ void PhoneBook::search(void)
     {
         std::cout << "Insert index of wanted contact: ";
         std::getline(std::cin, index);
-        if (isValidNumber(index))
+        if (isValidNumber(index) && index.length() == 1)
         {
             int_index = std::atoi(index.c_str());
             if (int_index <= 8)

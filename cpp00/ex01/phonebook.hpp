@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 10:09:40 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/02/26 06:16:40 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/03 04:49:38 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PHONEBOOK_HPP
 
 #include <iostream>
+#include <iomanip>
+
 #include "contact.hpp"
 
 class PhoneBook

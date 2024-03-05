@@ -72,6 +72,8 @@
         "numeric": "cpp",
         "random": "cpp",
         "fstream": "cpp",
-        "numbers": "cpp"
+        "numbers": "cpp",
+        "map": "cpp",
+        "cinttypes": "cpp"
     }
 }
