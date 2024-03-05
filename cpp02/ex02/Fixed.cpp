@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:03:48 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/05 07:49:44 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/05 08:54:11 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,106 @@ std::ostream& operator<<( std::ostream& COUT, Fixed const &number)
 {
     COUT << number.toFloat();
     return COUT;
+}
+
+/* >>>> Comparison operators <<<< */
+
+bool   Fixed::operator>( const Fixed& other ) const
+{
+    return (this->getRawBits() > other.getRawBits());
+}
+
+bool   Fixed::operator<( const Fixed& other ) const
+{
+    return (this->getRawBits() < other.getRawBits());
+}
+
+bool   Fixed::operator>=( const Fixed& other ) const
+{
+    return (this->getRawBits() >= other.getRawBits());
+}
+bool   Fixed::operator<=( const Fixed& other ) const
+{
+    return (this->getRawBits() <= other.getRawBits());
+}
+bool   Fixed::operator==( const Fixed& other ) const
+{
+    return (this->getRawBits() == other.getRawBits());
+}
+bool   Fixed::operator!=( const Fixed& other ) const
+{
+    return (this->getRawBits() != other.getRawBits());
+}
+
+/* >>>> Arithmetic operators <<<< */
+
+Fixed   Fixed::operator+( const Fixed& other ) const
+{
+    return (Fixed(this->toFloat() + other.toFloat()));
+}
+
+Fixed   Fixed::operator-( const Fixed& other ) const
+{
+    return (Fixed(this->toFloat() - other.toFloat()));
+}
+
+Fixed   Fixed::operator*( const Fixed& other ) const
+{
+    return (Fixed(this->toFloat() * other.toFloat()));
+}
+
+Fixed   Fixed::operator/( const Fixed& other ) const
+{
+    return (Fixed(this->toFloat() / other.toFloat()));
+}
+
+/* >>>> Increment operators <<<< */
+
+Fixed& Fixed::operator++(void)
+{
+    this->_fixedPointNum++;
+    return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed temp(*this);
+    this->_fixedPointNum++;
+    return temp;
+}
+
+Fixed& Fixed::operator--(void)
+{
+    this->_fixedPointNum--;
+    return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed temp(*this);
+    this->_fixedPointNum--;
+    return temp;
+}
+
+
+/* >>>> Overloaded member functions <<<< */
+
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+    return (a < b) ? a : b;
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+    return (a < b) ? a : b;
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+    return (a > b) ? a : b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+    return (a > b) ? a : b;
 }
