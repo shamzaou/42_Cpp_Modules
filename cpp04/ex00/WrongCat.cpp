@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:02:31 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 17:39:56 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 18:40:30 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 18:48:14 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog() : Animal("Dog")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-    std::cout << this->_type << " constructor called" << std::endl;
+    std::cout << _type << " constructor called" << std::endl;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-    std::cout << this->_type << " destructor called" << std::endl;
+    std::cout << _type << " destructor called" << std::endl;
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-    std::cout << "Woof Woof!" << std::endl;
+    std::cout << "Wrong Meow Meow!" << std::endl;
 }

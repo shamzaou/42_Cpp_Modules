@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:02:31 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 17:39:56 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 17:58:26 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 17:59:49 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-Dog::Dog() : Animal("Dog")
-{
-    std::cout << this->_type << " constructor called" << std::endl;
-}
+#include <iostream>
 
-Dog::~Dog()
+class WrongAnimal
 {
-    std::cout << this->_type << " destructor called" << std::endl;
-}
+protected:
+    std::string _type;
 
-void Dog::makeSound() const
-{
-    std::cout << "Woof Woof!" << std::endl;
-}
+public:
+    WrongAnimal();
+    WrongAnimal(std::string type);
+    WrongAnimal(const WrongAnimal& src);
+    WrongAnimal& operator=(const WrongAnimal& src);
+    virtual ~WrongAnimal();
+
+    void    makeSound() const;
+    std::string     getType() const;
+};
+
+#endif

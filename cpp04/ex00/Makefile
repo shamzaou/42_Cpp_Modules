@@ -6,17 +6,17 @@
 #    By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 17:03:35 by shamzaou          #+#    #+#              #
-#    Updated: 2024/03/06 14:49:12 by shamzaou         ###   ########.fr        #
+#    Updated: 2024/03/06 17:57:21 by shamzaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = ex00
 
 CXX := c++
 
 CXXFLAGS := -std=c++98 -Wall -Wextra -Werror
 
-SRCS := main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS := main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 

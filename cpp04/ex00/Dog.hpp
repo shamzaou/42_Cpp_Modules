@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:49:39 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 17:02:08 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:54:45 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
     Dog();
     ~Dog();
 
-    void makeSound() const override;
+    void makeSound() const;
 };
 
 #endif

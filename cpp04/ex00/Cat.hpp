@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:54:58 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 17:02:24 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:54:31 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
     Cat();
     ~Cat();
 
-    void makeSound() const override;
+    void makeSound() const;
 };
 
 #endif

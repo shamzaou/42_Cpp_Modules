@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:46:46 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 16:57:08 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:32:50 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
     Animal(std::string type);
     Animal(const Animal& src);
     Animal& operator=(const Animal& src);
-    ~Animal();
+    virtual ~Animal();
 
     virtual void    makeSound() const;
     std::string     getType() const;
