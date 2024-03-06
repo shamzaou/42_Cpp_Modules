@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:44:32 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:17:39 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 18:40:30 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 18:48:14 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "Brain.hpp"
+#include "WrongCat.hpp"
 
-int main( void )
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
+    std::cout << _type << " constructor called" << std::endl;
+}
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+WrongCat::~WrongCat()
+{
+    std::cout << _type << " destructor called" << std::endl;
+}
 
-    for ( int i = 0; i < 4; i++ ) {
-        delete animals[i];
-    }
-
-    return 0;
+void WrongCat::makeSound() const
+{
+    std::cout << "Wrong Meow Meow!" << std::endl;
 }

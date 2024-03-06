@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:44:32 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:17:39 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 15:46:46 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 21:24:54 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
+
+#include <iostream>
 #include "Brain.hpp"
 
-int main( void )
+class Animal
 {
+protected:
+    std::string _type;
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+public:
+    Animal(void);
+    Animal(std::string type);
+    Animal(const Animal& src);
+    Animal& operator=(const Animal& src);
+    virtual ~Animal();
 
-    for ( int i = 0; i < 4; i++ ) {
-        delete animals[i];
-    }
+    virtual void    makeSound() const;
+    std::string     getType() const;
+};
 
-    return 0;
-}
+#endif

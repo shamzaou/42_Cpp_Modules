@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:44:32 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:17:39 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 17:58:26 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 17:59:49 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "Brain.hpp"
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-int main( void )
+#include <iostream>
+
+class WrongAnimal
 {
+protected:
+    std::string _type;
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+public:
+    WrongAnimal();
+    WrongAnimal(std::string type);
+    WrongAnimal(const WrongAnimal& src);
+    WrongAnimal& operator=(const WrongAnimal& src);
+    virtual ~WrongAnimal();
 
-    for ( int i = 0; i < 4; i++ ) {
-        delete animals[i];
-    }
+    void    makeSound() const;
+    std::string     getType() const;
+};
 
-    return 0;
-}
+#endif

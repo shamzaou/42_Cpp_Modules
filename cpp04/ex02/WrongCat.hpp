@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:44:32 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:17:39 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 18:39:07 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 18:47:48 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "Brain.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-int main( void )
+#include "WrongAnimal.hpp"
+#include <iostream>
+
+class WrongCat : public WrongAnimal
 {
+public:
+    WrongCat();
+    ~WrongCat();
+    
+    void makeSound() const;
+};
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
-
-    for ( int i = 0; i < 4; i++ ) {
-        delete animals[i];
-    }
-
-    return 0;
-}
+#endif

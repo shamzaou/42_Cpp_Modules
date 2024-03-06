@@ -6,7 +6,7 @@
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:46:46 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 17:32:50 by shamzaou         ###   ########.fr       */
+/*   Updated: 2024/03/06 21:24:45 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {

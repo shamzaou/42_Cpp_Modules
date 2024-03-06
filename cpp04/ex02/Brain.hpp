@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:44:32 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:17:39 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 19:43:47 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 19:46:57 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "Brain.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-int main( void )
+#include <iostream>
+
+class Brain
 {
+private:
+    std::string _ideas[100];
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+public:
+    Brain( void );
+    ~Brain( void );
+    Brain(const Brain& src);
+    Brain& operator=(const Brain& src);
+};
 
-    for ( int i = 0; i < 4; i++ ) {
-        delete animals[i];
-    }
-
-    return 0;
-}
+#endif

@@ -6,11 +6,11 @@
 #    By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 17:03:35 by shamzaou          #+#    #+#              #
-#    Updated: 2024/03/06 21:13:02 by shamzaou         ###   ########.fr        #
+#    Updated: 2024/03/06 21:19:29 by shamzaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex01
+NAME = ex02
 
 CXX := c++
 

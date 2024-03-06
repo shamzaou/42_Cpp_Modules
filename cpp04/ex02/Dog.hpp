@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shamzaou <shamzaou@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 17:44:32 by shamzaou          #+#    #+#             */
-/*   Updated: 2024/03/06 21:17:39 by shamzaou         ###   ########.fr       */
+/*   Created: 2024/03/06 15:49:39 by shamzaou          #+#    #+#             */
+/*   Updated: 2024/03/06 20:57:27 by shamzaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Cat.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
+
+#include <iostream>
+#include "Animal.hpp"
 #include "Brain.hpp"
 
-int main( void )
+class Dog : public Animal
 {
+private:
+    Brain *_brain;
+    
+public:
+    Dog();
+    ~Dog();
+    
+    Dog(const Dog& sample);
+    Dog& operator=(const Dog& sample);
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+    void makeSound() const;
+};
 
-    for ( int i = 0; i < 4; i++ ) {
-        delete animals[i];
-    }
-
-    return 0;
-}
+#endif
